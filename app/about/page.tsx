@@ -18,12 +18,12 @@ export default function AboutPage() {
                   About KIDAR
                 </Badge>
                 <h1 className="text-4xl lg:text-5xl font-bold text-balance">
-                  Bridging Innovation and <span className="text-primary">Practical Adoption</span>
+                  Advancing Knowledge in the <span className="text-primary">Digital Economy</span>
                 </h1>
                 <p className="text-xl text-muted-foreground text-pretty leading-relaxed">
-                  The Kenya Institute of Digital Asset Research (KIDAR) is a premier research and training hub for
-                  digital finance in Africa. Founded to bridge the gap between blockchain innovation and practical
-                  adoption, KIDAR serves as a trusted source of education and insights.
+                  The Kenya Institute of Digital Asset Research (KIDAR) is Africa’s hub for digital asset research,
+                  education, and skills development. We exist to close the gap between innovation and adoption,
+                  empowering individuals and institutions to thrive in the digital economy.
                 </p>
               </div>
               <Button size="lg" asChild>
@@ -34,8 +34,8 @@ export default function AboutPage() {
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=500&width=600"
-                alt="KIDAR Research Team"
+                src="/images/about-team-meeting.png"
+                alt="KIDAR Research Team in Conference Room"
                 width={600}
                 height={500}
                 className="rounded-2xl shadow-xl"
@@ -58,9 +58,9 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent className="p-0">
                 <p className="text-muted-foreground leading-relaxed">
-                  To provide independent insights, professional training, and strategic advisory to individuals,
-                  institutions, and governments navigating the fast-evolving digital finance landscape. We are committed
-                  to advancing understanding and adoption of digital assets across Africa and emerging markets.
+                  To provide independent insights, professional training, and strategic advisory for individuals,
+                  institutions, and governments navigating the digital economy, advancing understanding and adoption of
+                  digital assets and emerging technologies across Africa and beyond.
                 </p>
               </CardContent>
             </Card>
@@ -74,9 +74,8 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent className="p-0">
                 <p className="text-muted-foreground leading-relaxed">
-                  To be the leading authority on digital asset research and education in Africa, empowering individuals
-                  and institutions to harness the transformative potential of blockchain technology for economic growth
-                  and financial inclusion.
+                  To lead Africa in digital asset research and education, empowering people and institutions to thrive
+                  in the digital economy
                 </p>
               </CardContent>
             </Card>
@@ -100,11 +99,12 @@ export default function AboutPage() {
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Award className="h-8 w-8 text-primary" />
                 </div>
-                <CardTitle>Excellence</CardTitle>
+                <CardTitle>Collaboration</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  We maintain the highest standards in research methodology, analysis, and educational delivery.
+                  We work hand in hand with partners across academia, industry, and government to advance research and
+                  innovation.
                 </p>
               </CardContent>
             </Card>
@@ -114,11 +114,12 @@ export default function AboutPage() {
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="h-8 w-8 text-primary" />
                 </div>
-                <CardTitle>Collaboration</CardTitle>
+                <CardTitle>Inclusion</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  We foster partnerships with institutions, governments, and industry leaders to drive innovation.
+                  We empower individuals and institutions across diverse communities to participate in the digital
+                  economy.
                 </p>
               </CardContent>
             </Card>
@@ -132,7 +133,8 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  We focus on creating meaningful change in how digital assets are understood and adopted in Africa.
+                  We translate research and education into real-world outcomes that shape policy, innovation, and
+                  inclusive growth.
                 </p>
               </CardContent>
             </Card>
@@ -182,65 +184,53 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="text-center">
-              <CardHeader>
-                <div className="w-24 h-24 bg-muted rounded-full mx-auto mb-4">
-                  <Image
-                    src="/placeholder.svg?height=96&width=96"
-                    alt="Team Member"
-                    width={96}
-                    height={96}
-                    className="rounded-full"
-                  />
-                </div>
-                <CardTitle>Dr. Sarah Kimani</CardTitle>
-                <CardDescription>Executive Director & Chief Researcher</CardDescription>
+            <Card className="relative overflow-hidden h-[400px] group">
+              <div className="absolute inset-0">
+                <Image src="/images/team-member-male.jpeg" alt="Newton M. Kariuki" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+              </div>
+              <CardHeader className="relative z-10 h-full flex flex-col justify-end text-white">
+                <CardTitle className="text-white">Newton M. Kariuki</CardTitle>
+                <CardDescription className="text-gray-200">Executive Director & Chief Researcher</CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  PhD in Financial Economics, 15+ years in digital asset research and policy development.
+              <CardContent className="relative z-10 text-white pb-6">
+                <p className="text-sm text-gray-200">
+                  BSc in Business Information Technology, author and researcher with hedge fund experience in digital
+                  assets and financial markets.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="text-center">
-              <CardHeader>
-                <div className="w-24 h-24 bg-muted rounded-full mx-auto mb-4">
-                  <Image
-                    src="/placeholder.svg?height=96&width=96"
-                    alt="Team Member"
-                    width={96}
-                    height={96}
-                    className="rounded-full"
-                  />
-                </div>
-                <CardTitle>Michael Ochieng</CardTitle>
-                <CardDescription>Head of Training & Education</CardDescription>
+            <Card className="relative overflow-hidden h-[400px] group">
+              <div className="absolute inset-0">
+                <Image src="/images/team-member-female.jpeg" alt="Roseline Gitau" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+              </div>
+              <CardHeader className="relative z-10 h-full flex flex-col justify-end text-white">
+                <CardTitle className="text-white">Roseline Gitau</CardTitle>
+                <CardDescription className="text-gray-200">Head of Training & Education</CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  Former blockchain consultant with expertise in institutional training and curriculum development.
+              <CardContent className="relative z-10 text-white pb-6">
+                <p className="text-sm text-gray-200">
+                  Experienced blockchain consultant specializing in curriculum design and professional training for
+                  institutions and emerging markets.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="text-center">
-              <CardHeader>
-                <div className="w-24 h-24 bg-muted rounded-full mx-auto mb-4">
-                  <Image
-                    src="/placeholder.svg?height=96&width=96"
-                    alt="Team Member"
-                    width={96}
-                    height={96}
-                    className="rounded-full"
-                  />
-                </div>
-                <CardTitle>Grace Wanjiku</CardTitle>
-                <CardDescription>Director of Strategic Partnerships</CardDescription>
+            <Card className="relative overflow-hidden h-[400px] group">
+              <div className="absolute inset-0">
+                <Image src="/images/kelvin-bundi.jpeg" alt="Kelvin Bundi" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+              </div>
+              <CardHeader className="relative z-10 h-full flex flex-col justify-end text-white">
+                <CardTitle className="text-white">Kelvin Bundi</CardTitle>
+                <CardDescription className="text-gray-200">Director of Strategic Partnerships</CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  MBA in International Business, specializing in public-private partnerships and regulatory affairs.
+              <CardContent className="relative z-10 text-white pb-6">
+                <p className="text-sm text-gray-200">
+                  MBA in Strategic Management with expertise in public–private partnerships, regulatory affairs, and
+                  ecosystem development.
                 </p>
               </CardContent>
             </Card>

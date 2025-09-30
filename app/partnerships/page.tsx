@@ -34,17 +34,17 @@ export default function PartnershipsPage() {
       examples: ["Financial institutions", "Fintech companies", "Consulting firms"],
     },
     {
-      title: "Government Partnerships",
-      description: "Support policy development and regulatory frameworks",
+      title: "Hedge Fund Partnerships",
+      description: "Strategic collaboration with hedge funds and investment firms on digital asset strategies",
       icon: Globe,
       benefits: [
-        "Policy development support",
-        "Regulatory framework design",
-        "Public sector training",
-        "Economic impact studies",
-        "International best practices",
+        "Digital asset investment strategies",
+        "Market research and analysis",
+        "Risk management frameworks",
+        "Portfolio diversification consulting",
+        "Regulatory compliance guidance",
       ],
-      examples: ["Central Bank of Kenya", "Ministry of ICT", "Capital Markets Authority"],
+      examples: ["Investment firms", "Asset managers", "Hedge funds"],
     },
   ]
 
@@ -171,7 +171,13 @@ export default function PartnershipsPage() {
 
                 <div className={`relative ${index % 2 === 1 ? "lg:order-1" : ""}`}>
                   <Image
-                    src="/placeholder.svg?height=500&width=600"
+                    src={
+                      index === 0
+                        ? "/images/academic-partnership.png"
+                        : index === 1
+                          ? "/images/corporate-partnership.png"
+                          : "/images/hedge-fund-partnership.png"
+                    }
                     alt={partnership.title}
                     width={600}
                     height={500}

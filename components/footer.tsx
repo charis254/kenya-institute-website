@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-09-18%20at%209.21.21%20PM-modified-QpOZKmIctZcgwrNfl39g7VBYUz0Cma.png"
+                src="/images/design-mode/WhatsApp%20Image%202025-09-18%20at%209.21.21%20PM-modified.png"
                 alt="KIDAR Logo"
                 width={40}
                 height={40}

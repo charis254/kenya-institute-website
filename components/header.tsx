@@ -28,7 +28,7 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-09-18%20at%209.21.21%20PM-modified-QpOZKmIctZcgwrNfl39g7VBYUz0Cma.png"
+              src="/images/design-mode/WhatsApp%20Image%202025-09-18%20at%209.21.21%20PM-modified.png"
               alt="KIDAR Logo"
               width={40}
               height={40}
@@ -75,14 +75,11 @@ const Header = () => {
                     <ListItem href="/consulting" title="Consulting">
                       Strategic advisory services
                     </ListItem>
-                    <ListItem href="/research" title="Research">
+                    <ListItem href="/services/research" title="Research">
                       Market insights and analysis
                     </ListItem>
                     <ListItem href="/training" title="Training">
                       Professional development programs
-                    </ListItem>
-                    <ListItem href="/reports" title="Reports">
-                      Comprehensive market reports
                     </ListItem>
                   </ul>
                 </NavigationMenuContent>
@@ -92,14 +89,8 @@ const Header = () => {
                 <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                    <ListItem href="/blog" title="Research Blog">
-                      Latest insights and analysis
-                    </ListItem>
                     <ListItem href="/courses" title="Courses">
                       Educational programs
-                    </ListItem>
-                    <ListItem href="/publications" title="Publications">
-                      Books and research papers
                     </ListItem>
                     <ListItem href="/events" title="Events">
                       Webinars and conferences
@@ -158,28 +149,19 @@ const Header = () => {
                     <Link href="/consulting" className="block text-sm" onClick={() => setIsOpen(false)}>
                       Consulting
                     </Link>
-                    <Link href="/research" className="block text-sm" onClick={() => setIsOpen(false)}>
+                    <Link href="/services/research" className="block text-sm" onClick={() => setIsOpen(false)}>
                       Research
                     </Link>
                     <Link href="/training" className="block text-sm" onClick={() => setIsOpen(false)}>
                       Training
-                    </Link>
-                    <Link href="/reports" className="block text-sm" onClick={() => setIsOpen(false)}>
-                      Reports
                     </Link>
                   </div>
                 </div>
                 <div className="space-y-2">
                   <p className="text-sm font-medium text-muted-foreground">Resources</p>
                   <div className="ml-4 space-y-2">
-                    <Link href="/blog" className="block text-sm" onClick={() => setIsOpen(false)}>
-                      Research Blog
-                    </Link>
                     <Link href="/courses" className="block text-sm" onClick={() => setIsOpen(false)}>
                       Courses
-                    </Link>
-                    <Link href="/publications" className="block text-sm" onClick={() => setIsOpen(false)}>
-                      Publications
                     </Link>
                     <Link href="/events" className="block text-sm" onClick={() => setIsOpen(false)}>
                       Events

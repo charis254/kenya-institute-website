@@ -33,8 +33,8 @@ export default function ConsultingPage() {
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=500&width=600"
-                alt="KIDAR Consulting Services"
+                src="/images/consulting-meeting.png"
+                alt="KIDAR Consulting Services - Professional Business Meeting"
                 width={600}
                 height={500}
                 className="rounded-2xl shadow-xl"

@@ -1,120 +1,71 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Progress } from "@/components/ui/progress"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { ArrowRight, BookOpen, Clock, Users, Award, Play, Star, CheckCircle, Globe, Target } from "lucide-react"
+import { ArrowRight, Clock, Users, Award, Target, CheckCircle, BookOpen, Globe } from "lucide-react"
 
 export default function CoursesPage() {
-  const flagshipCourse = {
-    title: "The Future of Money: Digital Assets in Emerging Markets",
-    description:
-      "Based on our published book, this flagship course blends research insights with practical applications, making it ideal for universities, corporates, and government institutions.",
-    duration: "8 weeks",
-    level: "Intermediate",
-    students: "500+",
-    rating: 4.9,
-    price: "$299",
-    image: "/placeholder.svg?height=400&width=600",
-    modules: 12,
-    certificates: true,
-  }
-
   const courses = [
     {
-      title: "Introduction to Digital Assets",
-      description: "Fundamentals of Bitcoin, Ethereum, and blockchain technology for beginners",
-      duration: "4 weeks",
-      level: "Beginner",
-      students: "1,200+",
-      rating: 4.8,
-      price: "$149",
-      image: "/placeholder.svg?height=200&width=300",
-      category: "Fundamentals",
-    },
-    {
-      title: "Crypto Markets & Trading",
-      description: "Market structure, on-chain data analysis, and risk management strategies",
+      title: "Cryptocurrency Fundamentals & Tokenomics",
+      description:
+        "Master the fundamentals of cryptocurrency markets, tokenomics, and value flow dynamics. Learn about supply-demand economics, token distribution models, and how different cryptocurrencies create and maintain value.",
       duration: "6 weeks",
       level: "Intermediate",
       students: "800+",
-      rating: 4.7,
-      price: "$249",
-      image: "/placeholder.svg?height=200&width=300",
-      category: "Trading",
-    },
-    {
-      title: "Blockchain for Business & Policy",
-      description: "Regulation, compliance, and enterprise blockchain use cases",
-      duration: "5 weeks",
-      level: "Advanced",
-      students: "600+",
-      rating: 4.9,
-      price: "$199",
-      image: "/placeholder.svg?height=200&width=300",
-      category: "Business",
-    },
-    {
-      title: "DeFi Fundamentals",
-      description: "Understanding decentralized finance protocols and yield farming strategies",
-      duration: "4 weeks",
-      level: "Intermediate",
-      students: "450+",
-      rating: 4.6,
-      price: "$179",
-      image: "/placeholder.svg?height=200&width=300",
-      category: "DeFi",
-    },
-    {
-      title: "Digital Asset Regulation in Africa",
-      description: "Comprehensive overview of regulatory frameworks across African markets",
-      duration: "3 weeks",
-      level: "Advanced",
-      students: "300+",
       rating: 4.8,
-      price: "$129",
-      image: "/placeholder.svg?height=200&width=300",
-      category: "Regulation",
+      price: "$249",
+      image: "/images/course-tokenomics.jpeg",
+      category: "Fundamentals",
+      modules: [
+        "Introduction to Cryptocurrency",
+        "Tokenomics Fundamentals",
+        "Supply & Demand Dynamics",
+        "Token Distribution Models",
+        "Value Flow Analysis",
+        "Market Cycles & Trends",
+      ],
     },
     {
-      title: "NFTs and Digital Ownership",
-      description: "Exploring non-fungible tokens, digital art, and intellectual property rights",
-      duration: "3 weeks",
+      title: "The Evolution of Money: From Cash to Crypto",
+      description:
+        "Explore the transformation of money from traditional fiat currencies to digital assets. Understand the historical context, technological innovations, and economic principles driving the shift to cryptocurrency.",
+      duration: "4 weeks",
       level: "Beginner",
-      students: "350+",
-      rating: 4.5,
-      price: "$99",
-      image: "/placeholder.svg?height=200&width=300",
-      category: "NFTs",
-    },
-  ]
-
-  const corporatePrograms = [
-    {
-      title: "Executive Digital Asset Strategy",
-      description: "Strategic planning and implementation for C-suite executives",
-      duration: "2 days",
-      format: "In-person/Virtual",
-      participants: "15-25",
-      price: "Custom pricing",
+      students: "1,200+",
+      rating: 4.9,
+      price: "$149",
+      image: "/images/course-evolution-money.jpeg",
+      category: "History",
+      modules: [
+        "History of Money",
+        "Fiat Currency Systems",
+        "Digital Payment Evolution",
+        "Bitcoin & Cryptocurrency Emergence",
+        "Future of Money",
+        "Economic Implications",
+      ],
     },
     {
-      title: "Government Policy Workshop",
-      description: "Regulatory framework development for government officials",
-      duration: "3 days",
-      format: "In-person",
-      participants: "20-30",
-      price: "Custom pricing",
-    },
-    {
-      title: "Financial Institution Training",
-      description: "Digital asset integration for banks and financial services",
-      duration: "5 days",
-      format: "Hybrid",
-      participants: "10-20",
-      price: "Custom pricing",
+      title: "Introduction to Digital Assets & Blockchain",
+      description:
+        "The bridge between technology and finance. Comprehensive introduction to blockchain technology, digital assets, and their applications in modern finance. Perfect for professionals seeking to understand the technical foundations.",
+      duration: "5 weeks",
+      level: "Beginner",
+      students: "950+",
+      rating: 4.7,
+      price: "$199",
+      image: "/images/course-digital-assets.jpeg",
+      category: "Technology",
+      modules: [
+        "Blockchain Fundamentals",
+        "Digital Asset Types",
+        "Smart Contracts",
+        "Decentralized Applications",
+        "Enterprise Blockchain",
+        "Real-World Use Cases",
+      ],
     },
   ]
 
@@ -132,18 +83,19 @@ export default function CoursesPage() {
                 Master <span className="text-primary">Digital Assets</span> with Expert-Led Courses
               </h1>
               <p className="text-xl text-muted-foreground text-pretty leading-relaxed">
-                Comprehensive educational programs for individuals and institutions. From fundamentals to advanced
-                strategies, our courses are designed by industry experts and backed by rigorous research.
+                Comprehensive educational programs designed by industry experts and backed by rigorous research. From
+                fundamentals to advanced strategies, our courses empower you to navigate the digital asset landscape
+                with confidence.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
-                <Link href="#flagship-course">
-                  Explore Flagship Course <ArrowRight className="ml-2 h-4 w-4" />
+                <Link href="#courses">
+                  Explore Courses <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <Link href="#all-courses">Browse All Courses</Link>
+                <Link href="/contact">Contact Education Team</Link>
               </Button>
             </div>
             <div className="flex items-center justify-center space-x-8 text-sm text-muted-foreground">
@@ -164,202 +116,81 @@ export default function CoursesPage() {
         </div>
       </section>
 
-      {/* Flagship Course */}
-      <section id="flagship-course" className="py-20">
+      {/* Featured Courses */}
+      <section id="courses" className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-balance">Flagship Course</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-balance">Our Courses</h2>
             <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto">
-              Our most comprehensive program, designed for professionals seeking deep expertise in digital assets
+              Expertly designed programs to build your digital asset expertise from the ground up
             </p>
           </div>
 
-          <Card className="overflow-hidden">
-            <div className="grid grid-cols-1 lg:grid-cols-2">
-              <div className="aspect-video lg:aspect-auto relative">
-                <Image
-                  src={flagshipCourse.image || "/placeholder.svg"}
-                  alt={flagshipCourse.title}
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                  <Button size="lg" variant="secondary" className="rounded-full">
-                    <Play className="h-6 w-6 mr-2" />
-                    Watch Preview
-                  </Button>
-                </div>
-              </div>
-              <div className="p-8 lg:p-12 flex flex-col justify-center">
-                <div className="space-y-6">
-                  <div className="space-y-4">
-                    <Badge variant="secondary">Flagship Course</Badge>
-                    <h3 className="text-2xl lg:text-3xl font-bold text-balance">{flagshipCourse.title}</h3>
-                    <p className="text-muted-foreground text-pretty leading-relaxed">{flagshipCourse.description}</p>
+          <div className="space-y-16">
+            {courses.map((course, index) => (
+              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div className="grid grid-cols-1 lg:grid-cols-2">
+                  <div className="aspect-square lg:aspect-auto relative order-2 lg:order-1">
+                    <Image src={course.image || "/placeholder.svg"} alt={course.title} fill className="object-cover" />
                   </div>
-
-                  <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div className="flex items-center space-x-2">
-                      <Clock className="h-4 w-4 text-primary" />
-                      <span>{flagshipCourse.duration}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Target className="h-4 w-4 text-primary" />
-                      <span>{flagshipCourse.level}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Users className="h-4 w-4 text-primary" />
-                      <span>{flagshipCourse.students} enrolled</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Star className="h-4 w-4 text-primary fill-primary" />
-                      <span>{flagshipCourse.rating}/5.0</span>
-                    </div>
-                  </div>
-
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between">
-                      <span className="font-semibold">Course Progress</span>
-                      <span className="text-sm text-muted-foreground">{flagshipCourse.modules} modules</span>
-                    </div>
-                    <Progress value={0} className="h-2" />
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <div className="text-2xl font-bold text-primary">{flagshipCourse.price}</div>
-                    <Button size="lg" asChild>
-                      <Link href="/courses/flagship">
-                        Enroll Now <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Card>
-        </div>
-      </section>
-
-      {/* Course Categories */}
-      <section id="all-courses" className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-balance">All Courses</h2>
-            <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto">
-              Choose from our comprehensive catalog of digital asset education programs
-            </p>
-          </div>
-
-          <Tabs defaultValue="individual" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto mb-12">
-              <TabsTrigger value="individual">Individual Courses</TabsTrigger>
-              <TabsTrigger value="corporate">Corporate Programs</TabsTrigger>
-            </TabsList>
-
-            <TabsContent value="individual" className="space-y-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {courses.map((course, index) => (
-                  <Card key={index} className="group hover:shadow-lg transition-all duration-300">
-                    <div className="aspect-video relative overflow-hidden rounded-t-lg">
-                      <Image
-                        src={course.image || "/placeholder.svg"}
-                        alt={course.title}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                    <CardHeader>
-                      <div className="flex items-center justify-between mb-2">
+                  <div className="p-8 lg:p-12 flex flex-col justify-center order-1 lg:order-2">
+                    <div className="space-y-6">
+                      <div className="space-y-4">
                         <Badge variant="secondary">{course.category}</Badge>
-                        <div className="flex items-center space-x-1 text-sm">
-                          <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
-                          <span>{course.rating}</span>
+                        <h3 className="text-2xl lg:text-3xl font-bold text-balance">{course.title}</h3>
+                        <p className="text-muted-foreground text-pretty leading-relaxed">{course.description}</p>
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-4 text-sm">
+                        <div className="flex items-center space-x-2">
+                          <Clock className="h-4 w-4 text-primary" />
+                          <span>{course.duration}</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <Target className="h-4 w-4 text-primary" />
+                          <span>{course.level}</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <Users className="h-4 w-4 text-primary" />
+                          <span>{course.students} enrolled</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <Award className="h-4 w-4 text-primary" />
+                          <span>Certificate included</span>
                         </div>
                       </div>
-                      <CardTitle className="text-lg group-hover:text-primary transition-colors">
-                        {course.title}
-                      </CardTitle>
-                      <CardDescription>{course.description}</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-4">
-                        <div className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
-                          <div className="flex items-center space-x-1">
-                            <Clock className="h-3 w-3" />
-                            <span>{course.duration}</span>
-                          </div>
-                          <div className="flex items-center space-x-1">
-                            <Target className="h-3 w-3" />
-                            <span>{course.level}</span>
-                          </div>
-                          <div className="flex items-center space-x-1">
-                            <Users className="h-3 w-3" />
-                            <span>{course.students}</span>
-                          </div>
-                          <div className="text-lg font-bold text-primary">{course.price}</div>
-                        </div>
-                        <Button className="w-full" asChild>
-                          <Link href={`/courses/${course.title.toLowerCase().replace(/\s+/g, "-")}`}>
+
+                      <div className="space-y-3">
+                        <h4 className="font-semibold">Course Modules:</h4>
+                        <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-muted-foreground">
+                          {course.modules.map((module, idx) => (
+                            <li key={idx} className="flex items-start space-x-2">
+                              <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                              <span>{module}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="flex items-center justify-between pt-4">
+                        <div className="text-2xl font-bold text-primary">{course.price}</div>
+                        <Button size="lg" asChild>
+                          <Link href="/contact">
                             Enroll Now <ArrowRight className="ml-2 h-4 w-4" />
                           </Link>
                         </Button>
                       </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </TabsContent>
-
-            <TabsContent value="corporate" className="space-y-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {corporatePrograms.map((program, index) => (
-                  <Card key={index} className="group hover:shadow-lg transition-all duration-300">
-                    <CardHeader>
-                      <Badge variant="secondary" className="w-fit">
-                        Corporate Program
-                      </Badge>
-                      <CardTitle className="text-lg group-hover:text-primary transition-colors">
-                        {program.title}
-                      </CardTitle>
-                      <CardDescription>{program.description}</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-4">
-                        <div className="space-y-2 text-sm">
-                          <div className="flex items-center justify-between">
-                            <span className="text-muted-foreground">Duration:</span>
-                            <span>{program.duration}</span>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <span className="text-muted-foreground">Format:</span>
-                            <span>{program.format}</span>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <span className="text-muted-foreground">Participants:</span>
-                            <span>{program.participants}</span>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <span className="text-muted-foreground">Pricing:</span>
-                            <span className="font-semibold text-primary">{program.price}</span>
-                          </div>
-                        </div>
-                        <Button className="w-full bg-transparent" variant="outline" asChild>
-                          <Link href="/contact">
-                            Request Quote <ArrowRight className="ml-2 h-4 w-4" />
-                          </Link>
-                        </Button>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </TabsContent>
-          </Tabs>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Learning Features */}
-      <section className="py-20">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-balance">Why Choose KIDAR Education?</h2>
@@ -415,7 +246,7 @@ export default function CoursesPage() {
       </section>
 
       {/* Institutional Partnerships */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-balance">Institutional Partnerships</h2>
@@ -525,8 +356,8 @@ export default function CoursesPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
-                <Link href="/courses/flagship">
-                  Enroll in Flagship Course <ArrowRight className="ml-2 h-4 w-4" />
+                <Link href="/contact">
+                  Enroll Now <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button
@@ -535,7 +366,7 @@ export default function CoursesPage() {
                 className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent"
                 asChild
               >
-                <Link href="/contact">Contact Education Team</Link>
+                <Link href="/consultation">Schedule Consultation</Link>
               </Button>
             </div>
           </div>

@@ -160,8 +160,8 @@ export default function TrainingPage() {
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                   <Globe className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle>Blockchain for Business & Policy</CardTitle>
-                <CardDescription>Regulation, compliance, and enterprise blockchain use cases</CardDescription>
+                <CardTitle>Hedge fund strategies and digital assets</CardTitle>
+                <CardDescription>Hedge fund strategies and digital assets for saccos and corporates use cases</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
