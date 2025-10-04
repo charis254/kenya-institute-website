@@ -10,36 +10,36 @@ export default function ResearchPage() {
   const articles = [
     {
       id: 1,
-      title: "Bitcoin Market Analysis Q1 2025",
+      title: "Cross-Border Cryptocurrency Payments: Transforming Remittances in Africa",
       excerpt:
-        "Comprehensive analysis of Bitcoin's performance in the first quarter of 2025, including price movements, on-chain metrics, and institutional adoption trends across African markets.",
+        "An in-depth analysis of how cryptocurrency and blockchain technology are revolutionizing cross-border payments and remittances across African markets, reducing costs and increasing financial accessibility for millions.",
       author: "Newton M. Kariuki",
       date: "March 15, 2025",
       category: "Market Analysis",
       readTime: "12 min read",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/images/research-remittances.jpeg",
     },
     {
       id: 2,
-      title: "Ethereum and DeFi Ecosystem Growth in Africa",
+      title: "Financial Inclusion Through Blockchain: Bridging the Banking Gap",
       excerpt:
-        "Exploring the rapid expansion of Ethereum-based decentralized finance protocols in African markets, examining adoption patterns, regulatory challenges, and opportunities for financial inclusion.",
+        "Exploring how blockchain technology and decentralized finance are providing financial services to underserved communities across Africa, enabling low-cost remittances and access to global financial markets.",
       author: "Roseline Gitau",
       date: "March 10, 2025",
       category: "DeFi Research",
       readTime: "15 min read",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/images/research-financial-inclusion.jpeg",
     },
     {
       id: 3,
-      title: "Regulatory Landscape for Digital Assets in East Africa",
+      title: "DeFi Adoption in Emerging Markets: Africa Leading the Revolution",
       excerpt:
-        "An in-depth examination of the evolving regulatory frameworks for cryptocurrencies and digital assets across East African nations, with focus on Kenya, Uganda, Tanzania, and Rwanda.",
+        "A comprehensive study of decentralized finance adoption patterns in emerging markets, with focus on how African nations are pioneering DeFi integration for everyday financial transactions and economic empowerment.",
       author: "Kelvin Bundi",
       date: "March 5, 2025",
       category: "Regulation",
       readTime: "18 min read",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/images/research-defi-markets.jpeg",
     },
   ]
 

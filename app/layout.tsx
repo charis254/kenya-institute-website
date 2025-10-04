@@ -1,7 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
+
 import { Analytics } from "@vercel/analytics/next"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
@@ -9,11 +9,17 @@ import ScrollToTop from "@/components/scroll-to-top"
 import "./globals.css"
 import { Suspense } from "react"
 
-import { Source_Serif_4 as V0_Font_Source_Serif_4 } from "next/font/google"
+import { Source_Serif_4, Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4 } from 'next/font/google'
 
-const sourceSerif = V0_Font_Source_Serif_4({
-  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
+// Initialize fonts
+const _geist = V0_Font_Geist({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"], variable: '--v0-font-geist' })
+const _geistMono = V0_Font_Geist_Mono({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"], variable: '--v0-font-geist-mono' })
+const _sourceSerif_4 = V0_Font_Source_Serif_4({ subsets: ['latin'], weight: ["200","300","400","500","600","700","800","900"], variable: '--v0-font-source-serif-4' })
+const _v0_fontVariables = `${_geist.variable} ${_geistMono.variable} ${_sourceSerif_4.variable}`
+
+const sourceSerif = Source_Serif_4({
   subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-source-serif",
 })
 
@@ -40,7 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${sourceSerif.variable} antialiased`}>
+      <body className={`${GeistSans.className} ${sourceSerif.variable} antialiased ${_v0_fontVariables}`}>
         <div className="min-h-screen flex flex-col">
           <Suspense fallback={<div>Loading...</div>}>
             <Header />

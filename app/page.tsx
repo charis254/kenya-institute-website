@@ -49,51 +49,15 @@ export default function HomePage() {
               </div>
             </div>
             <div className="relative">
-              <Card className="overflow-hidden shadow-2xl">
-                <div className="grid grid-cols-3 gap-0">
-                  {/* Left - Roseline Gitau */}
-                  <div className="relative group overflow-hidden h-96">
-                    <Image
-                      src="/images/team-member-male.jpeg"
-                      alt="Roseline Gitau"
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                      <p className="text-sm font-semibold text-center">Executive Director</p>
-                    </div>
-                  </div>
-
-                  {/* Middle - Newton M. Kariuki */}
-                  <div className="relative group overflow-hidden h-96">
-                    <Image
-                      src="/images/team-member-female.jpeg"
-                      alt="Newton M. Kariuki"
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                      <p className="text-sm font-semibold text-center">Head of Training</p>
-                    </div>
-                  </div>
-
-                  {/* Right - Kelvin Bundi */}
-                  <div className="relative group overflow-hidden h-96">
-                    <Image
-                      src="/images/kelvin-bundi.jpeg"
-                      alt="Kelvin Bundi"
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                      <p className="text-sm font-semibold text-center">Director of Strategic Partnerships</p>
-                    </div>
-                  </div>
-                </div>
-              </Card>
+              <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/hero-building.jpeg"
+                  alt="Modern digital asset research facility with blockchain technology overlay"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>
