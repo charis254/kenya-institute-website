@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Linkedin, Twitter, Mail, Award, BookOpen, Users } from "lucide-react"
 
@@ -38,6 +39,54 @@ export default function TeamPage() {
       linkedin: "#",
       twitter: "#",
       email: "kelvin.bundi@kidar.org",
+    },
+  ]
+
+  const researchers = [
+    {
+      name: "Dr. James Mwangi",
+      role: "Senior Research Analyst",
+      specialization: "DeFi & Stablecoin Research",
+      image: "/images/team-member-male.jpeg",
+    },
+    {
+      name: "Amina Hassan",
+      role: "Policy Research Specialist",
+      specialization: "Regulatory Analysis",
+      image: "/images/team-member-female.jpeg",
+    },
+    {
+      name: "David Kiprop",
+      role: "Market Research Analyst",
+      specialization: "Cryptocurrency Markets",
+      image: "/images/team-member-male.jpeg",
+    },
+    {
+      name: "Dr. Fatima Al-Rashid",
+      role: "Blockchain Technology Researcher",
+      specialization: "Technical Analysis",
+      image: "/images/team-member-female.jpeg",
+    },
+  ]
+
+  const advisors = [
+    {
+      name: "Prof. Robert Kiprotich",
+      role: "Academic Advisor",
+      affiliation: "University of Nairobi",
+      expertise: "Economics & Finance",
+    },
+    {
+      name: "Catherine Muriuki",
+      role: "Industry Advisor",
+      affiliation: "Former CBK Deputy Governor",
+      expertise: "Central Banking & Policy",
+    },
+    {
+      name: "Dr. Ahmed Osman",
+      role: "Technology Advisor",
+      affiliation: "Blockchain Consultant",
+      expertise: "Distributed Systems",
     },
   ]
 
@@ -148,6 +197,71 @@ export default function TeamPage() {
                   </div>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Research Team */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center space-y-4 mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-balance">Research Team</h2>
+            <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto">
+              Our research team consists of specialists in various aspects of digital assets and blockchain technology
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {researchers.map((researcher, index) => (
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
+                <CardHeader>
+                  <div className="w-24 h-24 mx-auto mb-4 relative">
+                    <Image
+                      src={researcher.image || "/placeholder.svg"}
+                      alt={researcher.name}
+                      fill
+                      className="object-cover rounded-full"
+                    />
+                  </div>
+                  <CardTitle className="text-lg">{researcher.name}</CardTitle>
+                  <CardDescription>{researcher.role}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Badge variant="outline" className="text-xs">
+                    {researcher.specialization}
+                  </Badge>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Advisory Board */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center space-y-4 mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-balance">Advisory Board</h2>
+            <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto">
+              Distinguished advisors who provide strategic guidance and industry insights
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {advisors.map((advisor, index) => (
+              <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow duration-300">
+                <CardHeader>
+                  <CardTitle className="text-lg">{advisor.name}</CardTitle>
+                  <CardDescription>{advisor.role}</CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-2">
+                  <p className="text-sm text-muted-foreground">{advisor.affiliation}</p>
+                  <Badge variant="secondary" className="text-xs">
+                    {advisor.expertise}
+                  </Badge>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
