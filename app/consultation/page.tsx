@@ -283,7 +283,7 @@ export default function ConsultationPage() {
                 <CardContent className="space-y-3">
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-sm text-muted-foreground">info@kidar.org</p>
+                    <p className="text-sm text-muted-foreground">info@kidar.co.ke</p>
                   </div>
                   <div>
                     <p className="font-medium">Location</p>
