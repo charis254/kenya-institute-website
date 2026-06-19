@@ -94,9 +94,9 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold mb-1">Email</h3>
                       <p className="text-muted-foreground">
-                        info@kidar.org
+                        info@kidar.co.ke
                         <br />
-                        research@kidar.org
+                        research@kidar.co.ke
                       </p>
                     </div>
                   </div>
@@ -142,7 +142,7 @@ export default function ContactPage() {
                     <div className="flex items-center justify-between p-3 border rounded-lg">
                       <div>
                         <p className="font-medium">General Inquiries</p>
-                        <p className="text-sm text-muted-foreground">info@kidar.org</p>
+                        <p className="text-sm text-muted-foreground">admin@kidar.co.ke</p>
                       </div>
                       <Button size="sm" variant="outline" asChild>
                         <a href="mailto:info@kidar.org">Email</a>
@@ -151,7 +151,7 @@ export default function ContactPage() {
                     <div className="flex items-center justify-between p-3 border rounded-lg">
                       <div>
                         <p className="font-medium">Research Team</p>
-                        <p className="text-sm text-muted-foreground">research@kidar.org</p>
+                        <p className="text-sm text-muted-foreground">research@kidar.co.ke</p>
                       </div>
                       <Button size="sm" variant="outline" asChild>
                         <a href="mailto:research@kidar.org">Email</a>
@@ -160,7 +160,7 @@ export default function ContactPage() {
                     <div className="flex items-center justify-between p-3 border rounded-lg">
                       <div>
                         <p className="font-medium">Training Programs</p>
-                        <p className="text-sm text-muted-foreground">training@kidar.org</p>
+                        <p className="text-sm text-muted-foreground">training@kidar.co.ke</p>
                       </div>
                       <Button size="sm" variant="outline" asChild>
                         <a href="mailto:training@kidar.org">Email</a>
