@@ -122,7 +122,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2 text-muted-foreground">
                 <Mail className="h-4 w-4 flex-shrink-0" />
-                <span>info@kidar.org</span>
+                <span>info@kidar.co.ke</span>
               </div>
             </div>
             <div className="space-y-2">
@@ -139,7 +139,7 @@ const Footer = () => {
 
         <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
           <p className="text-xs text-muted-foreground">
-            © 2025 Kenya Institute of Digital Asset Research (KIDAR). All rights reserved.
+            © 2026 Kenya Institute of Digital Asset Research (KIDAR). All rights reserved.
           </p>
           <div className="flex space-x-4 text-xs">
             <Link href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">
