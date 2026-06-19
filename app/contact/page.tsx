@@ -365,7 +365,7 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Our primary language is English, but we can arrange for translation services in Swahili, French, and
+                  Our primary language is English, but we can arrange for translation services in Swahili, and
                   other African languages as needed.
                 </p>
               </CardContent>
