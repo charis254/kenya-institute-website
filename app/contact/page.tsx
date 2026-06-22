@@ -96,7 +96,7 @@ export default function ContactPage() {
                       <p className="text-muted-foreground">
                         info@kidar.co.ke
                         <br />
-                        research@kidar.co.ke
+                        newton@kidar.co.ke
                       </p>
                     </div>
                   </div>
