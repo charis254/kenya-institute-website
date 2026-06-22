@@ -131,139 +131,156 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Quick Contact Options */}
-              <Card>
-                <CardHeader>
-                  <CardTitle>Quick Contact</CardTitle>
-                  <CardDescription>Choose the best way to reach us based on your needs</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between p-3 border rounded-lg">
-                      <div>
-                        <p className="font-medium">General Inquiries</p>
-                        <p className="text-sm text-muted-foreground">admin@kidar.co.ke</p>
-                      </div>
-                      <Button size="sm" variant="outline" asChild>
-                        <a href="mailto:info@kidar.org">Email</a>
-                      </Button>
-                    </div>
-                    <div className="flex items-center justify-between p-3 border rounded-lg">
-                      <div>
-                        <p className="font-medium">Research Team</p>
-                        <p className="text-sm text-muted-foreground">research@kidar.co.ke</p>
-                      </div>
-                      <Button size="sm" variant="outline" asChild>
-                        <a href="mailto:research@kidar.org">Email</a>
-                      </Button>
-                    </div>
-                    <div className="flex items-center justify-between p-3 border rounded-lg">
-                      <div>
-                        <p className="font-medium">Training Programs</p>
-                        <p className="text-sm text-muted-foreground">training@kidar.co.ke</p>
-                      </div>
-                      <Button size="sm" variant="outline" asChild>
-                        <a href="mailto:training@kidar.org">Email</a>
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+            {/* Quick Contact Options */}
+<Card>
+  <CardHeader>
+    <CardTitle>Quick Contact</CardTitle>
+    <CardDescription>Choose the best way to reach us based on your needs</CardDescription>
+  </CardHeader>
+  <CardContent className="space-y-4">
+    <div className="space-y-3">
+      <div className="flex items-center justify-between p-3 border rounded-lg">
+        <div>
+          <p className="font-medium">General Inquiries</p>
+          <p className="text-sm text-muted-foreground">admin@kidar.co.ke</p>
+        </div>
+        <Button size="sm" variant="outline" asChild>
+          <a href="mailto:admin@kidar.co.ke">Email</a>
+        </Button>
+      </div>
+      <div className="flex items-center justify-between p-3 border rounded-lg">
+        <div>
+          <p className="font-medium">Research Team</p>
+          <p className="text-sm text-muted-foreground">research@kidar.co.ke</p>
+        </div>
+        <Button size="sm" variant="outline" asChild>
+          <a href="mailto:research@kidar.co.ke">Email</a>
+        </Button>
+      </div>
+      <div className="flex items-center justify-between p-3 border rounded-lg">
+        <div>
+          <p className="font-medium">Training Programs</p>
+          <p className="text-sm text-muted-foreground">training@kidar.co.ke</p>
+        </div>
+        <Button size="sm" variant="outline" asChild>
+          <a href="mailto:training@kidar.co.ke">Email</a>
+        </Button>
+      </div>
+    </div>
+  </CardContent>
+</Card>
 
-            {/* Contact Form */}
-            <div className="lg:col-span-2">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-2xl">Send us a Message</CardTitle>
-                  <CardDescription>Fill out the form below and we'll get back to you within 24 hours</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="name">Full Name *</Label>
-                        <Input
-                          id="name"
-                          value={formData.name}
-                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          required
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="email">Email Address *</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          required
-                        />
-                      </div>
-                    </div>
+         {/* Contact Form */}
+<div className="lg:col-span-2">
+  <Card>
+    <CardHeader>
+      <CardTitle className="text-2xl">Send us a Message</CardTitle>
+      <CardDescription>Fill out the form below and we'll get back to you within 24 hours</CardDescription>
+    </CardHeader>
+    <CardContent>
+      <form 
+        onSubmit={(e) => {
+          e.preventDefault();
+          const emailTo = "info@kidar.co.ke";
+          const subject = encodeURIComponent(formData.subject || "Website Inquiry");
+          
+          // Format the email body cleanly with the user's input details
+          const bodyText = `Name: ${formData.name}
+Email: ${formData.email}
+Company: ${formData.company || "N/A"}
+Inquiry Type: ${formData.inquiryType || "General"}
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="company">Company/Organization</Label>
-                        <Input
-                          id="company"
-                          value={formData.company}
-                          onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="inquiryType">Inquiry Type *</Label>
-                        <Select
-                          value={formData.inquiryType}
-                          onValueChange={(value) => setFormData({ ...formData, inquiryType: value })}
-                        >
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select inquiry type" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="general">General Information</SelectItem>
-                            <SelectItem value="consulting">Consulting Services</SelectItem>
-                            <SelectItem value="training">Training Programs</SelectItem>
-                            <SelectItem value="research">Research Collaboration</SelectItem>
-                            <SelectItem value="partnership">Partnership Opportunities</SelectItem>
-                            <SelectItem value="media">Media & Press</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-                    </div>
+Message:
+${formData.message}`;
 
-                    <div className="space-y-2">
-                      <Label htmlFor="subject">Subject *</Label>
-                      <Input
-                        id="subject"
-                        value={formData.subject}
-                        onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                        required
-                      />
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="message">Message *</Label>
-                      <Textarea
-                        id="message"
-                        placeholder="Please provide details about your inquiry..."
-                        value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        rows={6}
-                        required
-                      />
-                    </div>
-
-                    <Button type="submit" size="lg" className="w-full">
-                      Send Message <Send className="ml-2 h-4 w-4" />
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-            </div>
+          const body = encodeURIComponent(bodyText);
+          
+          // Open the client's local email app prefilled with data
+          window.location.href = `mailto:${emailTo}?subject=${subject}&body=${body}`;
+        }} 
+        className="space-y-6"
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="space-y-2">
+            <Label htmlFor="name">Full Name *</Label>
+            <Input
+              id="name"
+              value={formData.name}
+              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              required
+            />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="email">Email Address *</Label>
+            <Input
+              id="email"
+              type="email"
+              value={formData.email}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              required
+            />
           </div>
         </div>
-      </section>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="space-y-2">
+            <Label htmlFor="company">Company/Organization</Label>
+            <Input
+              id="company"
+              value={formData.company}
+              onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+            />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="inquiryType">Inquiry Type *</Label>
+            <Select
+              value={formData.inquiryType}
+              onValueChange={(value) => setFormData({ ...formData, inquiryType: value })}
+            >
+              <SelectTrigger>
+                <SelectValue placeholder="Select inquiry type" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="general">General Information</SelectItem>
+                <SelectItem value="consulting">Consulting Services</SelectItem>
+                <SelectItem value="training">Training Programs</SelectItem>
+                <SelectItem value="research">Research Collaboration</SelectItem>
+                <SelectItem value="partnership">Partnership Opportunities</SelectItem>
+                <SelectItem value="media">Media & Press</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="subject">Subject *</Label>
+          <Input
+            id="subject"
+            value={formData.subject}
+            onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+            required
+          />
+        </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="message">Message *</Label>
+          <Textarea
+            id="message"
+            placeholder="Please provide details about your inquiry..."
+            value={formData.message}
+            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+            rows={6}
+            required
+          />
+        </div>
+
+        <Button type="submit" size="lg" className="w-full">
+          Send Message <Send className="ml-2 h-4 w-4" />
+        </Button>
+      </form>
+    </CardContent>
+  </Card>
+</div> 
 
       {/* Office Locations */}
       <section className="py-20 bg-muted/30">
