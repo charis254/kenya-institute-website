@@ -108,9 +108,9 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold mb-1">Phone</h3>
                       <p className="text-muted-foreground">
-                        +254 (0) 20 123 4567
+                        +254 (0) 7 29433191
                         <br />
-                        +254 (0) 700 123 456
+                        +254 (0) 7 40171782
                       </p>
                     </div>
                   </div>
